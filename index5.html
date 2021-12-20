@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellations = ["UrsaMinor", "Tarurus", "Cygnus", "Lyra", "Aquila", "UrsaMajor", "Leo"];
+    let starInput = prompt('Nhập tên ngôi sao');
+
+    function checkStar(star) {
+        let index = -1;
+        for (let i = 0; i < stars.length; i++) {
+            if (star === stars[i]) {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+    let index = checkStar(starInput);
+    if (index != -1) {
+        alert(constellations[index]);
+    } else {
+        alert('Ngôi sao bạn nhập không có trong mảng');
+    }
+
+
+</script>
+</body>
+</html>
